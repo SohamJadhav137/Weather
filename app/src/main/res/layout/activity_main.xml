@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bgcolor">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/search_bar_border"
+        android:hint="@string/e1"
+        android:padding="13dp"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:textColorHint="#88FFFFFF"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        android:textSize="25dp"
+        android:layout_below="@id/editText"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewCity"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempdesc"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editText"
+        android:id="@+id/textViewDesc"
+        android:layout_marginTop="110dp"/>
+
+    <TextView
+        android:id="@+id/textViewTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDesc"
+        android:layout_centerInParent="true"
+        android:text="@string/temp"
+        android:textColor="@color/white"
+        android:textSize="50dp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:id="@+id/linearLayout"
+        android:layout_below="@id/textViewTemp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mintemp"
+            android:layout_weight="1"
+            android:layout_marginRight="45dp"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:id="@+id/textViewMinTemp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:text="@string/maxtemp"
+            android:id="@+id/textViewMaxTemp"/>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginTop="100dp"
+        android:rowCount="2"
+        android:columnCount="3">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#83B1A9A9">
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sunrise"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tile1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:id="@+id/textViewSunrise"/>
+
+
+        </LinearLayout>
+        
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            android:backgroundTint="#83B1A9A9">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/sunset"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tile2"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:id="@+id/textViewSunset"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            android:backgroundTint="#83B1A9A9">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/wind"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tile3"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:id="@+id/textViewWind"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            android:backgroundTint="#83B1A9A9">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/resilience"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tile4"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:id="@+id/textViewPressure"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            android:backgroundTint="#83B1A9A9">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/humidity"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tile5"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:id="@+id/textViewHumidity"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp"
+            android:backgroundTint="#83B1A9A9">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/visibility"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tile6"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:id="@+id/textViewVisibility"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

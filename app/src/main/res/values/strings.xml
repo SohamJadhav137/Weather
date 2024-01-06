@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="e1">Enter City</string>
+    <string name="temp">25°C</string>
+    <string name="tempdesc">Haze</string>
+    <string name="mintemp">Min Temp: 15°C</string>
+    <string name="maxtemp">Max Temp: 27°C</string>
+    <string name="tile1">Sunrise"\n"05:00 AM</string>
+    <string name="tile2">Sunset"\n"06:47 PM</string>
+    <string name="tile3">Wind"\n"2.9 m/s</string>
+    <string name="tile4">Pressure"\n"956 atm</string>
+    <string name="tile5">Humidity"\n"80 %</string>
+    <string name="tile6">Visible"\n"4.2 m</string>
+    <string name="city">City_Name</string>
+    <string name="btn">SEARCH</string>
+</resources>
